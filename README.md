@@ -6,7 +6,7 @@ This project is intended to be a laravel 8 fresh start for a simple web applicat
 
 It has:
 
-- [Welcome page with login access](https://laravel.com/docs/routing).
+- Welcome page with login access.
 - [Backoffice access without heavy packages](https://laravel.com/docs/container).
 - Schools CRUD [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Students CRUD [database ORM](https://laravel.com/docs/eloquent).
