@@ -6,13 +6,12 @@ This project is intended to be a laravel 8 fresh start for a simple web applicat
 
 It has:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Welcome page with login access](https://laravel.com/docs/routing).
+- [Backoffice access without heavy packages](https://laravel.com/docs/container).
+- Schools CRUD [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Students CRUD [database ORM](https://laravel.com/docs/eloquent).
+- Admin user access update [schema migrations](https://laravel.com/docs/migrations).
+- [File uploader management](https://laravel.com/docs/queues).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
