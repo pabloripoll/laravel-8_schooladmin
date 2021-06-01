@@ -172,10 +172,14 @@ mysql > EXIT;
 ```
 
 ## Coping this repo or install Laravel 8.x
+
 #### Cloning this repository
 Change directory into desire location on your server where this project will be placed and execute the following command
 ```bash
-$ git@github.com:pabloripoll/laravel-8_schooladmin.git
+$ cd /var/www/{laravel-project-path}/
+```
+```bash
+$ git clone git@github.com:pabloripoll/laravel-8_schooladmin.git
 ```
 #### Start from cero
 Change to laravel project directory
@@ -434,7 +438,3 @@ In order to ensure that the Laravel community is welcoming to all, please review
 ### Security Vulnerabilities
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
