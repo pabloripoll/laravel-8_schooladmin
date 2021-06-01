@@ -14,7 +14,7 @@ It has:
 - Image restricted upload size and dimensions.
 - File uploader start for all types of files.
 - Migrations and seeders files.
-- List pagination.
+- List pagination and order by.
 - Modern JS ES 6+ promises for FORM or JSON AJAX sends formats async responses.
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
