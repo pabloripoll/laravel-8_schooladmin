@@ -2,7 +2,7 @@
 
 ## About School Admin
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project is intended to be a laravel 8 fresh start for a simple web application including its backoffice, using a school admin managment as example. Its includes login page for the app adminer, schools and students CRUD, and also an image upload store with public access for schools and private access for students and adminer.
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
