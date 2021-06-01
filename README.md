@@ -329,7 +329,8 @@ $ php artisan storage:link
 Images or some other files will be save by school, student or user 9 digit code from column `idcode`. Then will be completed by date _ time of the upload. And last, with random digits to sort from uploading multiple files at the same time. This practice is usefull when some file information is missing or to compare or debug when something went wrong.
 
 ## Page route admin structure
-To simplify app development progression, it took page structure example from Magento 2. So, navigation will be determined by Panel as main module, Section should be subsecuent page view and Page, the action.
+To simplify app development progression, it took page structure example from Magento 2. So, I devided the navigation as `Panel`, `Section` and `Page`. Of course it can be changed but remember to change their $variables_name in `app/Http/Controllers/Admin/PageController.php`. For e.g.: Panel would be the container module, Section would be subsecuent category and Page, the layout view or action.
+routes/web.php:
 ```php
 $admin = env('ADMIN_PATH_PREFIX'); // this directory should have a more secured name from .env
 Route::group(['prefix' => $admin, 'middleware' => 'auth'], function () {    
@@ -346,7 +347,47 @@ Route::group(['prefix' => $admin, 'middleware' => 'auth'], function () {
     Route::post('/form/{panel?}/{section?}/{page?}', [AdminDataController::class, 'formData']);    
 });
 ```
-Not precisely view will be place on Page. You can find examples in: `app/Http/Controllers/Admin/PageController.php`
+app/Http/Controllers/Admin/PageController.php:
+```php
+...
+class PageController extends Controller
+{
+    private $panel      = 'dashboard';
+    private $section    = 'index';
+    private $page       = 'index';    
+
+    /* MAIN CONTROLLERS */
+    
+    public function controller (
+            Request $request,
+            $panel = '',
+            $section = '',
+            $page = ''
+        )
+    {
+        !empty($panel) ? : $panel = $this->panel;
+        !empty($section) ? : $section = $this->section;
+        !empty($page) ? : $page = $this->page;
+        $method = $panel.'_'.$section.'_'.$page; // auto composing method
+
+        // $data object comes from method
+        method_exists(new Pagecontroller, $method) ?
+        $data = self::$method($request) :
+        $data = self::error_index_index($request);
+        
+        $layout = $method;
+        $data->layout = $layout; // include current method to data object
+
+        if ( isset($data->error) ) {
+            $layout = 'error_index_index'; $data->layout = $layout;            
+        } 
+        
+        return view('admin.layouts.'.$layout, ['data' => $data]);
+    }
+...
+```
+
+Also remember that `Page` won't be precisely the place where layout will be called. You can find examples in: `app/Http/Controllers/Admin/PageController.php`
 
 ### Using this app samples
 Place into project root directory and perform these following commands
