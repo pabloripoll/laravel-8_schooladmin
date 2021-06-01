@@ -62,11 +62,11 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                             <div class="flex items-center">
                                 <i class="fas fa-code-branch fa-2x font-semibold text-gray-400 dark:text-white"></i>&nbsp;&nbsp;
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white"><a href="https://github.com">Code & Documentation</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white"><a href="https://github.com/pabloripoll/laravel-8_schooladmin">Code & Documentation</a></div>
                             </div>
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    With Laravel as backend, it has some basic examples to build up a web application with its backoffice secure access. Dispite admin view template uses Bootstrat with JQuery, CRUD actions are perform AJAX send with FORM or JSON formats requests through plain & modern vanilla Javascript ES 6+.
+                                    With Laravel as backend, it has some basic examples to build up a web application with its backoffice secure access. Dispite admin view template uses Bootstrat with JQuery, CRUD actions are perform AJAX send with FORM or JSON formats requests through plain & modern vanilla Javascript ES 6+. <b><a href="https://github.com/pabloripoll/laravel-8_schooladmin" target="_blank">Clone this repository</a></b>
                                 </div>
                             </div>
                         </div>

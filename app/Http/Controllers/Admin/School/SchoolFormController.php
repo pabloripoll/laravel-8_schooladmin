@@ -18,7 +18,7 @@ use App\Models\School\SchoolModel;
 class SchoolFormController extends Controller
 {
 
-    static public function getList($request) {
+    static public function getList($request) { 
         $data = new \stdClass;
         $rows_per_page = 15;
         $pagination_limit = 4; // avoid less than 2
@@ -37,8 +37,7 @@ class SchoolFormController extends Controller
         $total = $query->count();
         $pages = intdiv($total, $rows_limit);
         $pages > 0 ? : $pages = 1;
-        ($total / $rows_limit) <= $pages ? : $pages = $pages + 1;        
-        //$page <= $pages ? : $page = $pages;
+        ($total / $rows_limit) <= $pages ? : $pages = $pages + 1;
 
         // Order - simple param
         $order = 'reg-90'; $order_key = 'id'; $order_value = 'desc';

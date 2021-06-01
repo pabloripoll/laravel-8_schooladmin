@@ -1,6 +1,6 @@
 @include('admin.components.base')
 
-@include('admin.components.header')
+@include('admin.components.header') 
 
 <div class="container-fluid">
     <div class="row">

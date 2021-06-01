@@ -12,15 +12,15 @@ use App\Models\School\SchoolImageModel;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\ProvinceController;
 
+use App\Http\Controllers\Admin\Student\StudentFormController;
+
 class SchoolLayoutController extends Controller
 {
     
     public static function layout_list($request){
         $data = new \stdClass;
-        
-        // send request as json format
-        $list = SchoolFormController::getList($request);
-        
+
+        $list = SchoolFormController::getList($request);        
         $data->list = $list->query;
         
         return $data;
@@ -66,11 +66,11 @@ class SchoolLayoutController extends Controller
                 'message'   => 'record id: '.$request->id.' not found'
             ];
         } else {
-
-            $data->school = $school;  
-            $data->students = $school->students;
+            $data->school = $school;
+            $list = StudentFormController::getList($request);        
+            $data->list = $list->query;
         }
-        return $data;
+        return $data;        
     }
 
 }
