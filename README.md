@@ -7,7 +7,7 @@ This project is intended to be a laravel 8 fresh start for a simple web applicat
 It has:
 
 - Welcome page with login access.
-- Backoffice access without heavy packages.
+- Backoffice access without npm packages dependancy.
 - Schools CRUD including image upload with public access.
 - Students CRUD including image upload with private access.
 - Admin user access update including image upload with private access.
@@ -16,14 +16,15 @@ It has:
 - Migrations and seeders files.
 - List pagination and order by.
 - Modern JS ES 6+ promises for FORM or JSON AJAX sends formats async responses.
+- More is up to imagination.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Example can be visited at: http://schooladmin.pabloripoll.com
 
-## Step 1 - Laravel 8.x Pre Requisites
+## Laravel 8.x pre requisites for this project
 
 https://laravel.com/docs/8.x/installation#server-requirements
 
-Composer must be installed locally or globally.
+Composer and GIT must be installed on server.
 
 ### Laravel on Nignx server
 To serve laravel on Nginx create a new site server block 
@@ -170,7 +171,13 @@ mysql > FLUSH PRIVILEGES;
 mysql > EXIT;
 ```
 
-## Copy this repo or install Laravel 8.x
+## Coping this repo or install Laravel 8.x
+#### Cloning this repository
+Change directory into desire location on your server where this project will be placed and execute the following command
+```bash
+$ git@github.com:pabloripoll/laravel-8_schooladmin.git
+```
+#### Start from cero
 Change to laravel project directory
 ```bash
 $ cd /var/www/{laravel-project-path}/
@@ -193,7 +200,6 @@ Apache server user
 ```bash
 $ ps aux | egrep '(apache|httpd)'
 ```
-
 Set up .ENV file at project's root directory
 ```bash
 $ sudo nano .env 
