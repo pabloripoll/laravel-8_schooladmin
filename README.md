@@ -387,7 +387,7 @@ class PageController extends Controller
 ...
 ```
 
-Also remember that `Page` won't be precisely the place where layout will be called. You can find examples in: `app/Http/Controllers/Admin/PageController.php`
+Also remember that backoffice access can be changed from .env, line `ADMIN_PATH_PREFIX` in order to secure folder access from `sample-domain.com/admin` to `sample-domain.com/Admin73h98fy4h` 
 
 ### Using this app samples
 Place into project root directory and perform these following commands
