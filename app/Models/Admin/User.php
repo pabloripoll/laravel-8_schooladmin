@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Admin;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,9 +17,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'user',
         'email',
         'password',
+        'name',
     ];
 
     /**
@@ -40,4 +41,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'users';
+
+    static function table(){
+        $protected = new User;
+        return $protected->table;
+    }
+
+    /**
+     * Get the user that owns the phone.
+     */
+    public function image()
+    {
+        return $this->hasOne(UserImageModel::class, 'user_id', 'id');
+    }
+
 }
