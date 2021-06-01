@@ -7,11 +7,15 @@ This project is intended to be a laravel 8 fresh start for a simple web applicat
 It has:
 
 - Welcome page with login access.
-- [Backoffice access without heavy packages](https://laravel.com/docs/container).
-- Schools CRUD [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Students CRUD [database ORM](https://laravel.com/docs/eloquent).
-- Admin user access update [schema migrations](https://laravel.com/docs/migrations).
-- [File uploader management](https://laravel.com/docs/queues).
+- Backoffice access without heavy packages.
+- Schools CRUD including image upload with public access.
+- Students CRUD including image upload with private access.
+- Admin user access update including image upload with private access.
+- Image restricted upload size and dimensions.
+- File uploader start for all types of files.
+- Migrations and seeders files.
+- List pagination.
+- Modern JS ES 6+ promises for FORM or JSON AJAX sends formats async responses.
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
